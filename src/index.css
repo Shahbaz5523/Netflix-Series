@@ -1,13 +1,83 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+body{
+  /* overflow-x: hidden; */
+  background-color: rgba(192, 192, 192, 0.315);
+}
+.App{
+  height: 100vh;
+}
+.App h2{
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: white;
+  text-transform: uppercase;
+  color: rgb(192, 192, 192);
+}
+.cards{
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 69px);
+}
+.card{
+  width: 250px;
+  margin: 30px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  transition: 0.5s ease-in-out box-shadow , 0.3s ease-in-out transform;
+  box-shadow: 0px 0px 1px 0px rgba(128, 128, 128, 0.534) , 0px 0px 10px 2px silver;
+}
+.card:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 30px 1px rgba(128, 128, 128, 0.404) , 0px 0px 50px 10px rgba(192, 192, 192, 0.671);
+}
+.card img{
+  width: 100%;
+  height: 65%;
+  object-fit: fill;  
+}
+.card-info{
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.title , .name , a{
+  margin: 3px;
+  color: gray;
+  font-weight: 300;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+.name{
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+a button {
+  color: gray;
+  padding: 3px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 2px solid gray;
+  outline: none;
+  background-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width:430px){
+  .card{
+    margin: 20px 0px;
+  }
 }
